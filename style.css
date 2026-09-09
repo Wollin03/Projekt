@@ -1,11 +1,41 @@
-/*farvepalette*/
 
+
+html{
+scroll-behavior: smooth;
+}
+
+
+/*farvepalette*/
 :root{
-    --background:var(--background);
-    --border-color:var(--background);
-    --text-color:var(--background);
-    --border:();
-    --cta: ();
-    --cta-soft:();
-    --shadow:();
+    --background:#f6f1e7;
+    --border-color:#e7dbc7;
+    --text-color:#4b3b2a;
+    --border:#bdc6ae;
+    --cta:#d69496;
+    --cta-soft:#ecc6c5;
+    --shadow:0 1px 2px rgba(20, 18, 14, 0.05), 0 10px 26px -16px rgba(20, 18, 14, 0.24);
+
+}
+
+.body{
+
+}
+
+.hero{
+
+}
+
+
+.hero::after{
+    content:"";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom
+        var(--background) 0%
+        rgba(0,0,0,0.08) 30%
+        rgba(0,0,0,0.2) 50%
+        rgba(0,0,0,0.08) 70%
+        var(--background) 100%
+    );
 }
