@@ -1,0 +1,11 @@
+/*farvepalette*/
+
+:root{
+    --background:var(--background);
+    --border-color:var(--background);
+    --text-color:var(--background);
+    --border:();
+    --cta: ();
+    --cta-soft:();
+    --shadow:();
+}
