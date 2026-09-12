@@ -18,9 +18,70 @@ scroll-behavior: smooth;
 
 }
 
-.body{
+body{
 background-color: var(--background);
 margin:0;
+}
+
+.announcement-bar{
+    background-color: white;
+    text-align: center;
+    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+    gap:40px;
+    font-size: 18px;
+    color:var(--text-color)
+    }
+
+
+nav{
+    position:absolute;
+    top: 2rem;
+    left: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 0 3rem;
+    z-index: 2;
+    column-gap: 7rem;
+}
+
+nav a{
+    color:#4b3b2a;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom:20px;
+    word-spacing: 1.5em;
+    display: flex;
+    
+}
+.nav-boks{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: ;
+    backdrop-filter: ;
+    border: ;
+    border-radius: ;
+    padding: 0.8rem 1.8rem;
+}
+
+.nav-ikoner{
+    /*margin-left:auto;*/
+    display: flex;
+    margin-right: 2px;
+    gap:2rem;
+    align-items: center;
+    top:-3px;
+}
+
+.nav-links{
+    display: flex;
+    gap:3rem;
 }
 
 .hero{
@@ -78,8 +139,7 @@ z-index:1;
     display: flex;
     gap: 70px;
     width:100%;
-    align-items:center
-    padding:none;
+    align-items:center;
     background-color:var(--background);
     border:none;
 }
@@ -97,7 +157,9 @@ z-index:1;
     font-weight: 400;
     font-size:3rem;
     margin: 0;
-    color:var(--text-color)
+    color:var(--text-color);
+    margin-top: 100px;
+
 }
 
 .tekst p{
@@ -133,44 +195,67 @@ z-index:1;
 
 .side-billede{
     flex:1 1 400px;
-    max-width: 650px;
+    max-width: 400px;
     height:auto;
     max-height: 600px;
     object-fit: cover;
-    border-radius: 4px;
+    border-radius: 20px;
+    margin-top: 60px;
+    opacity: 85%;
 }
 
-.announcement-bar{
-    background-color: var(--background);
-    text-align: center;
-    padding: 12px 0;
+.hovedskrift{
+    font-family: 'Coromorant Garamond', Geogria, Serif;
     display: flex;
+    margin-left: 200px;
+    font-size: 1.6rem;
+    margin-top:20px;
+}
+
+.alle-steder{
+    display: flex;
+    gap: 5px;
+    margin-top: 100px;
     justify-content: center;
-    gap:40px;
-    font-size: 18px;
-    color:var(--text-color)
-    }
-
-.nav{
-    position:absolute;
-    top: 2rem;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 3rem;
-    z-index: 2;
 }
 
-.nav-boks{
-    position: relative;
-    overflow: hidden;
+.alle-billeder{
+    margin-top:-90px;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    max-height: 400px;
+    flex: 1 1 400px;
+    margin-bottom: 100px;
+}
+
+.allesteder-boks{
+    margin-bottom: 100px;
+}
+
+.ipx5{
     display: flex;
-    align-items: center;
-    background: ;
-    backdrop-filter: ;
-    border: ;
-    border-radius: ;
-    padding: 0.8rem 1.8rem;
+    margin-left:200px;
+    font-size: 1.6rem;
+    margin-top:-50px;
+    font-family:'Cormorant Garamond', Georgia, Serif;
+    color:var(--text-color);
+}
+
+.regn{
+    font-family: 'Baskerville', "times new roman", serif;
+    display: flex;
+    margin-left: 200px;
+    font-size: 1.6rem;
+    margin-top: -30px;
+    color: var(--text-color);
+}
+
+.beskrivelse{
+    display:flex;
+    margin-left: 200px;
+    font-size: 1.6rem;
+    max-width: 500px;
+    color: var(--text-color);
+
 }
