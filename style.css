@@ -35,6 +35,11 @@ margin:0;
     color:var(--text-color)
     }
 
+.bed-stjerner{
+    width:100px;
+    height:auto;
+    margin-top:-10px;
+}
 .logo img{
     width:100px;
     height:auto;
@@ -43,7 +48,7 @@ margin:0;
 /*vores navigationsbar*/
 nav{
     position:absolute;
-    top: 2rem;
+    top: -2px;
     left: 0;
     right: 0;
     display: grid;
@@ -64,19 +69,6 @@ nav a{
     word-spacing: 1.5em;
     display: flex;
     
-}
-
-/*en container der kan være rundt om vores nav hvis vi vælger*/
-.nav-boks{
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    background: ;
-    backdrop-filter: ;
-    border: ;
-    border-radius: ;
-    padding: 0.8rem 1.8rem;
 }
 
 /*de ikoner vi har i vores nav*/
@@ -237,7 +229,7 @@ z-index:1;
 /*vores hovedskrift*/
 .tekst h2{
      display: flex;
-    margin-left:30px;
+    margin-left:80px;
     margin-top: 250px;
     color: var(--text-color);
     font-family: 'Cormorant Garamond', Georgia, Serif;
@@ -275,6 +267,8 @@ z-index:1;
     display: flex;
     gap:2.5rem;
     margin-top:1rem;
+    list-style: none;
+    padding: 0;
 }
 
 /*hver eneste boks, med ikon og tekst, stabler det ovenpå hinanden*/
@@ -309,7 +303,6 @@ z-index:1;
     right: 0px;
     opacity: 85%;
     position: absolute;
-    shad
 }
 
 /*More than sound*/
@@ -493,7 +486,7 @@ width:100%;
 .musikken-cykle{
     top:200px;
     position: absolute;
-    height:600px;
+    height:800px;
     width:100%;
     bottom:200px;
 }
@@ -501,6 +494,7 @@ width:100%;
 /*"stemningen"-boksen: positioneringsanker for hele sektionen*/
 .stemningen-boks{
     position:relative;
+    margin-top:400px;
 }
 
 /*overskrift-blokken (eyebrow-tekst) ovenpå telefon-billedet*/
@@ -561,10 +555,10 @@ width:100%;
     background: linear-gradient(
         to bottom,
         var(--background) 0%,
-        rgba(0,0,0,0.08) 30%,
-        rgba(0,0,0,0.2) 50%,
-        rgba(0,0,0,0.08) 70%,
-        var(--background) 100%
+        var(--background)13%,
+        rgba(0,0,0,0) 35%,
+        rgba(0,0,0,0) 75%,
+        var(--background)100%
     );
 }
 
@@ -683,8 +677,9 @@ width:100%;
 /*hovedbilledet i "Lyd, der lyser op" - beholder de rigtige proportioner*/
 .lys-billede-sektion{
     position: relative;
-    width: 700px;
-    margin: 0 ;
+    width: 760px;
+    margin: 0;
+    z-index: 2;
 }
 
 .lys-farver-billede{
@@ -711,6 +706,11 @@ width:100%;
     text-transform: uppercase;
 }
 
+.lys-billede-wrapper{
+    position: relative;
+    width: 900px;
+    margin-left:70px;
+}
 
 
 /*den lodrette billed-strimmel til højre*/
@@ -720,13 +720,19 @@ width:100%;
     right: 0;
     display: flex;
     flex-direction: column;
-    z-index: 2;
+    z-index: 1;
 }
 
 .strimmel-billede{
     width: 230px;
     height: 200px;
     object-fit: cover;
+    border-radius: 16px;
+}
+
+.overskrift-lyd-der-lyser{
+    text-align: center;
+    color: var(--text-color);
 }
 
 /*tekst under billederne*/
@@ -743,9 +749,10 @@ width:100%;
 .lys-citat{
     font-family: 'Cormorant Garamond', Georgia, Serif;
     font-style: italic;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     color: var(--text-color);
     margin-top: 30px;
+    text-align: center;
 }
 
 /*"vælg din farve"-sektionen: titel + billede*/
@@ -838,6 +845,45 @@ width:100%;
     padding: 80px 20px;
 }
 
+.inkluderet-indhold{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    text-align: left;
+}
+
+.inkluderet-tekst{
+    background-color: #8a9a7b;
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 250px;
+}
+
+.inkluderet-intro{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    margin: 0 0 20px 0;
+}
+
+.inkluderet-liste{
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Cormorant Garamond', Georgia, Serif;
+    font-size: 1.3rem;
+}
+
+.inkluderet-citat{
+    font-family: 'Cormorant Garamond', Georgia, Serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
 .overskrift-inkluderet{
     margin-bottom: 40px;
 }
@@ -849,11 +895,121 @@ width:100%;
 
 .inkluderet-sektion{
     max-width: 900px;
-    margin: 0 auto;
+    margin-left: -60px;;
+    position: relative;
+}
+
+.inkluderet-sektion::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: 
+        linear-gradient(to right, var(--background) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,0) 90%, var(--background) 100%),
+        linear-gradient(to bottom, var(--background) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,0) 90%, var(--background) 100%);
 }
 
 .inkluderet-billede{
     width: 100%;
     height: auto;
     display: block;
+}
+
+.laeg-i-kurv-lumina{
+    background-color: #f9f1ea;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.pris-kurv{
+    font-size: 1.3rem;
+    color: var(--text-color);
+}
+
+.pris-kurv-boks-lumina-one{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #f2d9d9;
+    gap:90px;
+    border-radius: 50px;
+    padding: 10px 10px 10px 25px;
+    width: 350px;
+    height:70px;
+    margin-top: 1000px;
+    margin-right:80px;
+}
+
+footer{
+    background-color: #f3dede;
+    display: flex;
+    gap: 80px;
+    padding: 60px 80px;
+}
+
+.footer-logo-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.cd-disk{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left:-90px;
+}
+
+.logo-audio{
+    width: 30px;
+    height: auto;
+    transform: rotate(0deg);
+    margin-left:-100px;
+}
+
+.footer-kolonner{
+    display: flex;
+    gap: 100px;
+    flex: 1;
+}
+
+.footer-kolonne{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-overskrift{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-overskrift:first-child{
+    margin-top: 0;
+}
+
+.footer-links{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.footer-links a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: 'Cormorant Garamond', Georgia, Serif;
+    font-size: 1.1rem;
 }

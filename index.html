@@ -15,15 +15,19 @@
 <body>
  
 <!--Siden starter her-->
+<header>
 <div class="announcement-bar">
 <span>15% studierabat</span>
 <span> 30 dages tilfredshedsgaranti</span>
+<img src="images/bed-stjerner.png" alt="stjerner" class="bed-stjerner">
 </div>
 
 <a href="#" class="logo">
     <img src="images/lumina-logo-hires-uden-baggrund.png" alt="logo billede">
 </a>
+</header>
 
+<main>
 <div class="hero">
     <video id="hero-video" autoplay muted loop playsinline>
         <source src="images/hero-video-produkt.mp4" type="video/mp4">
@@ -69,7 +73,7 @@
 
 <div class="hero-tekst">
     <h1>LUMINA AUDIO</h1>
-    <p>slogan?</p>
+    <p>En lille højtaler. Store øjeblikke</p>
 </div>
 </div>
 
@@ -174,27 +178,31 @@
 <section>
 <article class="stor-boks">
     <div class="tekst">
-        <h2>More than sound</h2>
+        <h2>Lumina one</h2>
         <p>Kraftfuld lyd, stemningsfuldt lys og et tidsløst design, der følger dig over alt.</p>
 
-        <div class="stats">
-            <div class="stat">
+        <ul class="stats">
+            <li class="stat">
                 <img src="images/lydstyrke-ikon.png" alt="lydstyrke" class="stat-icon">
                 <p>100 dB</p>
-            </div>
-            <div class="stat">
+            </li>
+            <li class="stat">
                 <img src="images/batteri-ikon.png" alt="batteri" class="stat-icon">
                 <p>18 Timer</p>
-            </div>
-            <div class="stat">
+            </li>
+            <li class="stat">
                 <img src="images/fjer-ikon.png" alt="fjer" class="stat-icon">
                 <p>1,5 Kg</p>
-            </div>
-        </div>
+            </li>
+        </ul>
     </div>
 
     <!--indsæt billede af produkt-->
-    <img src="images/speaker-med-skygge.png" alt="Billede af produkt" class="side-billede">
+    <img src="images/rigtigbilledetil skygge.png" alt="Billede af produkt" class="side-billede">
+    <div class="pris-kurv-boks-lumina-one">
+            <p class="pris-kurv">1.495 kr.</p>
+            <button class="laeg-i-kurv-lumina">Læg i kurv</button>
+        </div>
 </article>
 </section>
 
@@ -251,8 +259,10 @@
             <h2 class="lyser-titel">Lyd, der lyser op.</h2>
             <p>Vælg din stemning</p>
         </div>
+    <div class="lys-billede-wrapper">
         <div class="lys-billede-sektion">
             <img src="images/lys farver 1.jpg" alt="farver af lys" class="lys-farver-billede">
+            </div>
             <div class="tre-billeder-lys">
                 <img src="images/stemning-sunset.jpg" alt="lys i naturen" class="strimmel-billede">
                 <img src="images/stemning-party.jpg" alt="lys til fest" class="strimmel-billede">
@@ -291,14 +301,73 @@
         <div class="overskrift-inkluderet">
             <h2 class="inkluderet-titel">Inkluderet med Lumina Audio One.</h2>
         </div>
-        <div class="inkluderet-sektion">
-            <img src="images/inkluderetto.png" alt="billede af inkluderet" class="inkluderet-billede">
-            
+
+        <div class="inkluderet-indhold">
+            <div class="inkluderet-sektion">
+                <img src="images/inkluderetto.png" alt="billede af inkluderet" class="inkluderet-billede">
+            </div>
+
+            <div class="inkluderet-tekst">
+                <p class="inkluderet-intro">Køber du Lumina One følger disse ting med:</p>
+                <ul class="inkluderet-liste">
+                    <li>Lumina One</li>
+                    <li>USB-C kabel</li>
+                    <li>Quick start guide</li>
+                    <li>Velkomst kort</li>
+                    <li>Tote bag</li>
+                </ul>
+                <p class="inkluderet-citat">- og masser af gode stunder.</p>
+            </div>
         </div>
     </article>
 </section>
+</main>
 
-</section>
+<footer>
+    <div class="footer-logo-section">
+        <img src="images/vinyl-ikon.png" alt="cd disk som logo" class="cd-disk">
+        <img src="images/prikker-ikon.png" alt="billede af det prikkede logo og navn" class="logo-audio">
+    </div>
+    <div class="footer-kolonner">
+
+     <div class="footer-kolonne">
+            <h3 class="footer-overskrift">Kundeservice</h3>
+            <ul class="footer-links">
+                <li><a href="#">Levering & forsendelse</a></li>
+                <li><a href="#">Returneringer</a></li>
+                <li><a href="#">Produktsupport</a></li>
+                <li><a href="#">Kontakt os</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Find Butik</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-kolonne">
+            <h3 class="footer-overskrift">Vores virksomhed</h3>
+            <ul class="footer-links">
+                <li><a href="#">Om os</a></li>
+                <li><a href="#">Ansvarlighed</a></li>
+                <li><a href="#">Jobmuligheder</a></li>
+            </ul>
+
+            <h3 class="footer-overskrift">Download vores App</h3>
+            <ul class="footer-links">
+                <li><a href="#">Oplev vores app</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-kolonne">
+            <h3 class="footer-overskrift">Sociale Links</h3>
+            <ul class="footer-links">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">TikTok</a></li>
+            </ul>
+        </div>
+
+    </div>
+</footer>
+  
  <script src="script.js"></script>
 </body>
 </html>
