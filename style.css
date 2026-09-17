@@ -1,5 +1,6 @@
 *{box-sizing: border-box;}
 
+/*Får siden til at scrolle smooth ned ved tryk af link*/
 html{
 scroll-behavior: smooth;
 }
@@ -15,7 +16,6 @@ scroll-behavior: smooth;
     --cta:#d69496;
     --cta-soft:#ecc6c5;
     --shadow:0 1px 2px rgba(20, 18, 14, 0.05), 0 10px 26px -16px rgba(20, 18, 14, 0.24);
-
 }
 
 body{
@@ -23,6 +23,7 @@ background-color: var(--background);
 margin:0;
 }
 
+/*Er vores sektion med 15% studierabat+tilfredshedsgaranti*/
 .announcement-bar{
     background-color: white;
     text-align: center;
@@ -34,7 +35,12 @@ margin:0;
     color:var(--text-color)
     }
 
-
+.logo img{
+    width:100px;
+    height:auto;
+    margin-top:-40px;
+}
+/*vores navigationsbar*/
 nav{
     position:absolute;
     top: 2rem;
@@ -48,6 +54,7 @@ nav{
     column-gap: 7rem;
 }
 
+/*Styling af links inde i vores navigationsbar*/
 nav a{
     color:#4b3b2a;
     text-decoration: none;
@@ -58,6 +65,8 @@ nav a{
     display: flex;
     
 }
+
+/*en container der kan være rundt om vores nav hvis vi vælger*/
 .nav-boks{
     position: relative;
     overflow: hidden;
@@ -70,6 +79,7 @@ nav a{
     padding: 0.8rem 1.8rem;
 }
 
+/*de ikoner vi har i vores nav*/
 .nav-ikoner{
     /*margin-left:auto;*/
     display: flex;
@@ -79,11 +89,13 @@ nav a{
     top:-3px;
 }
 
+/*række af vores tekst links*/
 .nav-links{
     display: flex;
     gap:3rem;
 }
 
+/*vores hero sektion*/
 .hero{
     position: relative;
     width: 100%;
@@ -92,6 +104,7 @@ nav a{
 
 }
 
+/*vores video*/
 #hero-video{
     width: 100%;
     height: 100%;
@@ -99,7 +112,7 @@ nav a{
     display:block;
 }
 
-
+/*Det her gør at der er blur rundt om videoen så den blender mere end i siden*/
 .hero::after{
     content:"";
     position: absolute;
@@ -114,6 +127,7 @@ nav a{
     );
 }
 
+/*hovedskrift+slogan*/
 .hero-tekst{
 position: absolute;
 top: 50%;
@@ -124,6 +138,7 @@ text-align:center;
 z-index:1;
 }
 
+/*hovedskrift*/
 .hero-tekst h1{
     font-family:'Cormorant Garamond', Georgia, serif;
     font-weight:400;
@@ -133,6 +148,70 @@ z-index:1;
     white-space: nowrap;
 }
 
+/*ydre ramme om karrusellen*/
+.karousel{
+    width: 100%;
+    overflow: hidden;
+}
+
+/*hvert enkelt produktboks*/
+.lille-boks{
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F4F3F0;
+    width:350px;
+    border:none;
+    display:flex;
+    justify-content:center;
+    box-sizing:border-box;
+    gap:0.5px;
+    flex-direction: column;
+    gap: 0.6rem;
+    text-align: left;
+}
+
+/*selve overskriften*/
+.kollektioner-titel{
+    color:var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size:1.5rem;
+    letter-spacing:3px;
+    text-align: center;                                                                                                                                                                                                                                                                                                                                                                                       
+    margin-top:200px;
+    font-weight:300;
+    margin-bottom:100px;
+}
+
+/*produktbillede ind i hver boks*/
+.lille-boks-billede{
+    height:250px;
+    width:250px;
+    margin-bottom:30px;
+    margin-top:100px;
+    align-items: center;
+}
+
+/*Båndet der glider, nederste linje gør at den kører den evige glide-effekt*/
+.karousel-track{
+    display: flex;
+    gap:10px;
+    width: max-content;
+    animation:glide 100s linear infinite;
+}
+
+/*pauser animationen når musen holdes hen over*/
+.karousel-track:hover{
+    animation-play-state: paused;
+}
+
+/*selve animationen, flytter banen fra sin startposition til halvvejs gennem sig selv*/
+@keyframes glide{
+    from { transform: translateX(0);}
+    to { transform: translateX(-50%);}
+}
+
+/*rammen omkring more than sound sektionen*/
 .stor-boks{
     box-sizing:border-box;
     display: flex;
@@ -144,6 +223,7 @@ z-index:1;
     position: relative;
 }
 
+/*Vores tekst*/
 .tekst{
     flex: 1 1 400px;
     max-width: 500px;
@@ -154,10 +234,11 @@ z-index:1;
     padding-top:300px;
 }
 
+/*vores hovedskrift*/
 .tekst h2{
      display: flex;
     margin-left:30px;
-    margin-top: 80px;
+    margin-top: 250px;
     color: var(--text-color);
     font-family: 'Cormorant Garamond', Georgia, Serif;
     font-size: 4rem;
@@ -168,35 +249,45 @@ z-index:1;
     transform: scale(1.3,1.5);
     transform-origin:left;
     top:0px;
-
-
 }
 
-.tekst p{
-    font-size: 1.5rem;
+/*vores brødtekst*/
+.tekst>p{
+    font-size: 1.8rem;
     line-height:1.6;
     color: var(--text-color);
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     letter-spacing: 3px;
-    margin-left: 30px;;
-    
+    margin-left: 80px;
+    margin-top:200px;
 }
 
+.stat p{
+    font-size:1.4rem;
+    color:var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    white-space:nowrap;
+}
+
+/*rækken der samler vores 3 stats*/
 .stats{
     display: flex;
     gap:2.5rem;
     margin-top:1rem;
 }
 
+/*hver eneste boks, med ikon og tekst, stabler det ovenpå hinanden*/
 .stat{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.6rem;
     text-align: center;
+    margin-left:80px;
 }
 
+/*selve ikon-billedet inde i hver stat, sat til en fast størrelse*/
 .stat-icon{
     width: 80px;
     height: 80px;
@@ -206,34 +297,25 @@ z-index:1;
     font-size:1.3rem;
 }
 
+/*vores billede med højtaleren og disken*/
 .side-billede{
     flex:1 1 400px;
-    width: 450px;
+    width: 550px;
     height:auto;
-    max-height: 800px;
+    max-height: 900px;
     object-fit: cover;
     border-radius: 20px;
-    top: 60px;
-    right: 50px;
+    top: 200px;
+    right: 0px;
     opacity: 85%;
     position: absolute;
+    shad
 }
 
-.graes-billede{
-    flex:1 1 400px;
-    max-width: 150px;
-    max-height: 350px;
-    object-fit: cover;
-    top: 300px;
-    right:390px;
-    height:250px;
-    position: absolute;
-    border-radius: 20px;
-    opacity: 90%;
-}
+/*More than sound*/
 .hovedskrift{
-     display: flex;
-    margin-left: 30px;
+    display:flex;
+    margin-left: 80px;
     margin-top: 200px;
     margin-bottom: 600px;
     position: relative;
@@ -241,55 +323,341 @@ z-index:1;
     
 }
 
-.everyday-tekst{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    text-transform: uppercase;
-    color: var(--text-color);
-    letter-spacing: 3px;
-    margin-left: 30px;;
-    position: absolute;
-}
-.alle-steder-titel{
+/*titel*/
+.regn-stopper-ikke-titel{
     font-family: 'Cormorant Garamond', Georgia, Serif;
-    font-size: 5rem;
+    font-size: 4rem;
     letter-spacing: 3px;
-    left:30px;
-    color: var(--text-color);
+    left:-20px;
+    color: #999999;
     position: absolute;
     transform: scale(1.3,1.5);
-    font-weight: 300;
+    font-weight:500;
     transform-origin:left;
+    width:500px;
+    top:150px;
+    z-index:2;
 }
 
-.broedtekst{
-    font-family: 'Montserrat', sans-serif;
-    color:var(--text-color);
-    font-size: 1.5rem;
-    position: absolute;
-    top: 400px;
-    left:60px;
-    max-width: 500px;
-    z-index: 1;
-}
 
-.alle-steder{
+/*wrappen omkring billedet i sektionen*/
+.regn-stopper-ikke{
     display: flex;
     gap: 60px;
     margin-top: 100px;
     justify-content: center;
 }
 
-.alle-steder-sektion{
+/*Selve sektionens ydre ramme*/
+.regn-stopper-ikke-sektion{
     position: relative;
     min-height: 800px;
     padding-top: 1px;
 }
 
+/*udforsk lumina linket*/
 .udforsk{
     position:absolute;
-    top:550px;
+    top:650px;
+    left:225px;
+    display:flex;
+    z-index:1;
+    align-items: center;
+    gap:10px;
+    text-decoration: none;
+    color:white;
+    font-family:'Montserrat', sans-serif;
+    font-size:0.9rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+/*teksten*/
+.udforsk-tekst{
+    text-decoration: underline;
+}
+
+/*pilen der er ved teksten*/
+.pil{
+    font-size: 1.1rem;
+}
+
+/*styling for alle billeder*/
+.alle-billeder{
+    margin-top:-90px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 600px;
+    flex: 1 1 400px;
+    margin-bottom: 100px;
+}
+
+/*styling for kun billede 1- regn billedet*/
+.billede-1{
+top: 350px;
+position: absolute;
+height:100%;
+width:100%;
+}
+
+/*styrer afstanden under ipx5 boksen*/
+.regn-stopper-ikke-boks{
+    margin-bottom: 100px;
+}
+
+/*ipx5 teksten*/
+.ipx5{
+    display: flex;
+    margin-left:60px;
+    font-size: 1.8rem;
+    font-weight:300;
+    margin-top:-70px;
+    letter-spacing:3px;
+    font-family:'Montserrat',sans-Serif;
+    color:var(--text-color);
+    text-transform:uppercase;
+}
+
+/*ipx5 tekst*/
+.broedtekst{
+    font-family: 'Montserrat', sans-serif;
+    color:var(--text-color);
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1000;
+    left:150px;
+    line-height: 1.5;
+    bottom: 300;
+    max-width: 800px;
+}
+
+/*ikon og beskrivelse i regn-sektionen*/
+.regndrabe-ikon{
+    display:flex;
+    align-items:flex-start;
+    gap:1rem;
+}
+
+.beskrivelse-{
+    width:40px;
+    height:40px;
+}
+
+/*"musikken følger med"-boksen: gør billedsektionen til et positioneringsanker*/
+.musikken-foelger-med-boks{
+    position: relative;
+
+}
+
+/*titlen i "musikken følger med"*/
+.musikken-foelger-med-titel{
+    font-family:'Cormorant Garamond', Georgia, Serif;
+    font-size:5rem;
+    letter-spacing: 3px;
+    color:white;
+    font-weight: 500;
+}
+
+/*brødteksten i "musikken følger med"*/
+.musikken-overskrift p{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top:15px;
+}
+
+/*den blurrede tekstboks der ligger ovenpå cykel-billedet*/
+.musikken-overskrift{
+    position: absolute;
+    top:250px;
     left:60px;
+    width:500px;
+    z-index:2;
+    background:rgba(0,0,0,0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+    padding:10px 20px;
+    border-radius:8px;
+}
+
+/*billedsektionen - sætter højden så cykel-billedet (som er absolute) har plads*/
+.musikken-foelger-med-sektion{
+    position:relative;
+    min-height: 800px;
+    padding-top:1px;
+}
+
+/*selve cykel-billedet*/
+.musikken-cykle{
+    top:200px;
+    position: absolute;
+    height:600px;
+    width:100%;
+    bottom:200px;
+}
+
+/*"stemningen"-boksen: positioneringsanker for hele sektionen*/
+.stemningen-boks{
+    position:relative;
+}
+
+/*overskrift-blokken (eyebrow-tekst) ovenpå telefon-billedet*/
+.stemningen-overskrift{
+    position: absolute;
+    top:250px;
+    right:60px;
+    width:500px;
+    z-index:2;
+    text-transform: uppercase;
+    color: var(--text-color);
+    font-size:1.3rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*titlen i stemningen-overskrift*/
+.stemningen-titel{
+    font-family: 'Cormorant Garamond', Georgia, Serif;
+    font-size:3rem;
+    letter-spacing:3px;
+    color:var(--text-color);
+    font-weight: 500;
+    margin-top:-10px;
+}
+
+/*"CONNECT"-boksen med pris og læg-i-kurv*/
+.stemningen-forbind{
+    position: absolute;
+    top:1000px;
+    left:350px;
+    width:400px;
+    z-index:2;
+    font-size:1.3rem;;
+    text-transform:uppercase;
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*titlen i CONNECT-boksen*/
+.stemningen-forbind-titel{
+    font-family:'Cormorant Garamond', Georgia, Serif;
+    font-size:3rem;
+    letter-spacing:3px;
+    color:var(--text-color);
+    font-weight:500;
+    margin-top:-10px;
+}
+
+/*gradient-fade øverst/nederst på telefon-billedet, så det glider ind i baggrunden*/
+.stemning-billede-telefoner-sektion::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(
+        to bottom,
+        var(--background) 0%,
+        rgba(0,0,0,0.08) 30%,
+        rgba(0,0,0,0.2) 50%,
+        rgba(0,0,0,0.08) 70%,
+        var(--background) 100%
+    );
+}
+
+/*gradient-fade øverst/nederst på telefon-billedet, så det glider ind i baggrunden*/
+.stemning-billede-telefoner-sektion{
+    position: relative;
+    min-height: 1500px;
+    padding-top: 1px;
+}
+
+/*selve telefon-billedet*/
+.bagrundsbillede-telefoner{
+    top:200px;
+    position: absolute;
+    height: 1300px;
+    width: 100%;
+    left:0;
+}
+
+/*den lille streg under "CONNECT" (regn/stemning-varianten)*/
+.linje{
+    width:60px;
+    height:1px;
+    background-color:var(--text-color);
+}
+
+/*"CONNECT"-label med streg foran*/
+.connect-label{
+    display:flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    letter-spacing:3px;
+    font-family: 'Montserrat', sans-serif;
+    color:var(--text-color);
+    text-transform: uppercase;
+}
+
+/*samme streg, men til "APP CONTROL"-labelen*/
+.linje-app{
+    width:60px;
+    height:1px;
+    background-color: var(--text-color);
+}
+
+/*"APP CONTROL"-label med streg foran*/
+.connect-label-app{
+     display:flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    letter-spacing:3px;
+    font-family: 'Montserrat', sans-serif;
+    color:var(--text-color);
+    text-transform: uppercase;
+
+}
+
+/*boksen med pris og "læg i kurv"-knap*/
+.pris-kurv-boks{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #f2d9d9;
+    gap:90px;
+    border-radius: 50px;
+    padding: 10px 10px 10px 25px;
+    width: 350px;
+    height:70px;
+    margin-top: 20px;
+}
+
+/*selve prisen*/
+.pris{
+    font-size: 1.3rem;
+    color: var(--text-color);
+}
+
+/*"læg i kurv"-knappen*/
+.laeg-i-kurv{
+    background-color: #f9f1ea;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/*"læs mere"-linket i regn-sektionen*/
+.laes-mere{
+    position:absolute;
+    top:325px;
     display:flex;
     z-index:1;
     align-items: center;
@@ -302,134 +670,190 @@ z-index:1;
     text-transform:uppercase;
 }
 
-.udforsk-tekst{
+/*teksten*/
+.laes-mere-tekst{
     text-decoration: underline;
 }
 
-.pil{
+/*pilen der er ved teksten*/
+.pil-mere{
     font-size: 1.1rem;
 }
-.alle-billeder{
-    margin-top:-90px;
-    max-width: 600px;
-    height: auto;
-    object-fit: cover;
-    max-height: 600px;
-    flex: 1 1 400px;
-    margin-bottom: 100px;
+
+/*hovedbilledet i "Lyd, der lyser op" - beholder de rigtige proportioner*/
+.lys-billede-sektion{
+    position: relative;
+    width: 700px;
+    margin: 0 ;
 }
 
-.billede-1{
-top: 700px;
-position: absolute;
-left: 30px;
-height:400px ;
-border-radius: 20px;
-}
-
-.billede-2{
-height: 500px;
-top:500px;
-position: absolute;
-right: 50px;
-width: 400px;
-border-radius: 20px;
-
-}
-.allesteder-boks{
-    margin-bottom: 100px;
-}
-
-.ipx5{
-    display: flex;
-    margin-left:80px;
-    font-size: 1.1rem;
-    font-weight:300;
-    margin-top:30px;
-    letter-spacing:3px;
-    font-family:'Montserrat',sans-Serif;
-    color:var(--text-color);
-    text-transform:uppercase;
-}
-
-.regn{
-    display: flex;
-    margin-left: 80px;
-    margin-top: -20px;
-    color: var(--text-color);
-    font-family: 'Cormorant Garamond', Georgia, Serif;
-    font-size: 1.8rem;
-    width: 400px;
-    font-weight:300;
-    letter-spacing: 1.8px;
-    position: absolute;
-    transform: scale(1.3,1.5);
-    transform-origin:left;
-}
-
-.regn h2{
-    font-weight:400;
-}
-.beskrivelse{
-    display:flex;
-    margin-left: 80px;
-    font-size: 1.6rem;
-    margin-top:150px;
-    max-width: 700px;
-    color: var(--text-color);
-    font-family: 'Montserrat', sans-serif;
-
-}
-
-.karousel{
+.lys-farver-billede{
     width: 100%;
-    padding: 300px 0;
-    overflow: hidden;
+    height: 580px;
+    object-fit: cover;
+    display: block;
+    object-position: center top;
 }
 
-.lille-boks{
-    text-decoration: none;
-    color: var(--text-color);
-    font-family: 'Montserrat', sans-serif;
-    background-color: #F4F3F0;
-    width:350px;
-    border:none;
-    height:500px;
-    display:flex;
-    justify-content:center;
-    box-sizing:border-box;
-    gap:1px;
-    flex-direction: column;
-    gap: 0.6rem;
-    text-align: left;
-}
-
-.kollektioner-titel{
-    color:var(--text-color);
-    font-family: 'Montserrat', sans-serif;
-    font-size:2rem;
-    letter-spacing:3px;
-    text-align: center;                                                                                                                                                                                                                                                                                                                                                                                       
-    margin-top:300px;
-}
-.lille-boks-billede{
-    height:400px;
-    width:350px;
-    margin-bottom:80px;
-    margin-top:100px;
-}
-.karousel-track{
+/*SUNSET/PARTY/CHILL-teksterne under kortene på hovedbilledet*/
+.stemning-labels{
+    position:absolute;
+    bottom: 40px;
+    left: 100px;
     display: flex;
-    gap:32px;
-    width: max-content;
-    animation:glide 100s linear infinite;
+    gap: 100px;
+    z-index:1;
+}
+.kort-label{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-.karousel-track:hover{
-    animation-play-state: paused;
+
+
+/*den lodrette billed-strimmel til højre*/
+.tre-billeder-lys{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
 }
 
-@keyframes glide{
-    from { transform: translateX(0);}
-    to { transform: translateX(-50%);}
+.strimmel-billede{
+    width: 230px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/*tekst under billederne*/
+.lys-broedtekst{
+    max-width: 700px;
+    margin: 120px auto 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/*det kursive citat nederst i "Lyd, der lyser op"*/
+.lys-citat{
+    font-family: 'Cormorant Garamond', Georgia, Serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-top: 30px;
+}
+
+/*"vælg din farve"-sektionen: titel + billede*/
+.vaelg-din-farve{
+    text-align: center;
+    padding: 80px 20px;
+}
+
+
+.overskrift-vaelg-farve{
+    margin-bottom: 40px;
+}
+
+.vaelg-din-farve-titel{
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.vaelg-din-farve-sektion{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.vaelg-farve{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.vaelg-farve-titel{
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+
+.farve-billede{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* startpositioner - skal justeres så de rammer hver højtaler på dit billede */
+.farve-hotspot-groen{ top: 20%; left: 2%;  width: 26%; height: 65%; }
+.farve-hotspot-creme{ top: 20%; left: 26%; width: 26%; height: 65%; }
+.farve-hotspot-pink{  top: 20%; left: 50%; width: 26%; height: 65%; }
+.farve-hotspot-lilla{ top: 20%; left: 74%; width: 26%; height: 65%; }
+
+.farve-hotspot.aktiv{
+    filter: grayscale(0%) brightness(1);
+    box-shadow: 0 0 60px 20px currentColor;
+}
+
+.farve-hotspot-groen.aktiv{ color: #8a9a7b; }
+.farve-hotspot-creme.aktiv{ color: #e8e2d8; }
+.farve-hotspot-pink.aktiv{ color: #d9a6a6; }
+.farve-hotspot-lilla.aktiv{ color: #b3a6d9; }
+
+.farve-prikker{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.farve-prik{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.farve-prik-groen{ background-color: #8a9a7b; }
+.farve-prik-creme{ background-color: #e8e2d8; }
+.farve-prik-pink{  background-color: #d9a6a6; }
+.farve-prik-lilla{ background-color: #b3a6d9; }
+
+.farve-prik.aktiv{
+    border-color: #333;
+    transform: scale(1.15);
+}
+
+/*"inkluderet med Lumina Audio One"-sektionen: titel + billede*/
+.inkluderet{
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.overskrift-inkluderet{
+    margin-bottom: 40px;
+}
+
+.inkluderet-titel{
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.inkluderet-sektion{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.inkluderet-billede{
+    width: 100%;
+    height: auto;
+    display: block;
 }
