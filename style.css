@@ -5,6 +5,9 @@ html{
 scroll-behavior: smooth;
 }
 
+@media (max-width: 768px){
+
+}
 
 /*farvepalette*/
 :root{
@@ -128,6 +131,12 @@ transform: translate(-50%, -50%);
 color: var(--headline-color);
 text-align:center;
 z-index:1;
+}
+
+.hero-tekst>p{
+    font-family: 'Montserrat', Georgia,serif;
+    font-size:1.3rem;
+    color: white;
 }
 
 /*hovedskrift*/
@@ -733,6 +742,8 @@ width:100%;
 .overskrift-lyd-der-lyser{
     text-align: center;
     color: var(--text-color);
+    font-family: 'Cormorant Garamond' sans-serif;
+    font-size:1.4rem;
 }
 
 /*tekst under billederne*/
